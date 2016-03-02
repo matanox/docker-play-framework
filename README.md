@@ -1,12 +1,13 @@
-This is a docker container for running a play framework application.
+This is a docker container of play framework.
 
 # Note:
-if you hadn't setup a dedicated security group for docker in your local OS, you will need to prepend `sudo` to all/most `docker` commands below.
+if you hadn't setup a dedicated security group for docker in your local OS, you will need to prepend `sudo` to all/most `docker` commands below. So please do.
 
 # Building this container:
 ```
-docker build -t play-framework .
+docker build -t matanster/play-framework .
 ```
+This will take several minutes, depending mostly on your connection speed.
 
 # Using this container to run a play framework app:
 
@@ -19,10 +20,12 @@ docker build -t play-framework .
     ```
     docker run -v /local-application-path:/app:rw -p 9000:9000 matanster/play-framework bin/app-name
     ```
-    Which makes the docker container mount the path you supply as `/app` in its virtual file system, whereas:
+    whereas:
 
-    + `local-application-path` should be the location extracted to above,
-    + `app-name` should be the name of the executable
+        + `local-application-path` should be the location extracted to, as per above
+        + `app-name` should be the name of the executable in /bin of the extraction
+
+    Which makes the docker container mount the path you supply as `/app` in its virtual file system,
 
     To run the container differently, see `docker run --help`.
 
@@ -42,7 +45,7 @@ docker build -t new-container-name .
 
 # Docker Hub
 
-Docker Hub just stores containers. A little clumsy to administer, no real added value. It is probably faster to locally build this image after pulling this repo from github. But anyway if you must:
+Docker Hub just stores containers. A little clumsy to administer, no real added value. It may probably be as fast to locally build the image after having pulled this repo. But anyway if you must:
 
 ##Publishing this container to hub.docker.com:
 
