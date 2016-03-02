@@ -45,7 +45,7 @@ docker build -t new-container-name .
 
 # Docker Hub
 
-Docker Hub just stores containers. A little clumsy to administer, no real added value. It may probably be as fast to locally build the image after having pulled this repo. But anyway if you must:
+Docker Hub just stores containers. A little clumsy to administer, no real added value. For a local machine, it is now much faster to locally build the image after having pulled this repo, or copy the image on a local network. But anyway if you must:
 
 ##Publishing this container to hub.docker.com:
 
@@ -59,9 +59,11 @@ Docker Hub just stores containers. A little clumsy to administer, no real added 
 
 3. push it to dockerhub
 
-    ```
-    docker push dockerhub-user-name/play-framework
-    ```
+   ```
+   docker push dockerhub-user-name/play-framework
+   ```
+
+   this will take a long while because the built image is at least as large as an Ubuntu installation! some 30 minutes on a fair connection.
 
 ##Getting the container from hub.docker.com:
 
