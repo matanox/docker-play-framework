@@ -17,7 +17,7 @@ docker build -t play-framework .
 3. run this docker container via:
 
     ```
-    docker run -v /local-application-path:/app:rw -p 9000:9000 play-framework bin/app-name
+    docker run -v /local-application-path:/app:rw -p 9000:9000 matanster/play-framework bin/app-name
     ```
     Which makes the docker container mount the path you supply as `/app` in its virtual file system, whereas:
 
