@@ -1,4 +1,4 @@
-This is a docker container of play framework.
+This is a docker image of play framework.
 
 # Note:
 if you hadn't setup a dedicated security group for docker in your local OS, you will need to prepend `sudo` to all/most `docker` commands below. So please do.
