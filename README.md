@@ -3,13 +3,13 @@ This is a docker container of play framework.
 # Note:
 if you hadn't setup a dedicated security group for docker in your local OS, you will need to prepend `sudo` to all/most `docker` commands below. So please do.
 
-# Building this container:
+# Building this image:
 ```
 docker build -t matanster/play-framework .
 ```
 This will take several minutes, depending mostly on your connection speed.
 
-# Using this container to run a play framework app:
+# Using this image to run a play framework app:
 
 1. package your play application with the `dist` or  `universal:packageZipTarball` command (see https://www.playframework.com/documentation/2.4.x/Production)
 
